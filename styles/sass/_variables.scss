@@ -2,13 +2,17 @@ $colors: (
     primary: #1A196D,
     secondary: #FE5D44,
     tertiary: #000,
-    quatenary: #FFF
+    quaternary: #FFF
 );
 
 $font-sizes: (
     body: 1.6rem,
     logo: 3.3rem,
     nav-links: 2rem,
+    hello: 3.8rem,
+    name: 9.7rem,
+    sub-title: 4.3rem,
+    button: 3.2rem
 );
 
 $font-weights: (
@@ -20,7 +24,6 @@ $font-weights: (
 $font-styles: (
     normal: normal,
     italic: italic,
-
 );
 
 $fonts: (

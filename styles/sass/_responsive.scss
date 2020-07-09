@@ -8,9 +8,12 @@
 
 $viewport-increment: 0.1px; // customize to suite
 
+
+
 // Desktop
-$desktop: 1230px; // customize to suite
+$desktop: 1440px; // customize to suite
 $pre-desktop: $desktop - $viewport-increment;
+$post-desktop: $desktop + $viewport-increment;
 
 // Tablet
 $tablet: 768px; // customize to suite
@@ -69,7 +72,7 @@ $max: max-width;
     .wrapper {
       max-width: 1230px;
     }
-    
+
     body {
       font-size: size(body) * 0.75;
     }
@@ -79,10 +82,17 @@ $max: max-width;
     body {
       font-size: size(body) * 0.875;
     }
+    .box img {
+      // width: 550px;
+    }
 }
 
-@include mediaQuery($min, $desktop) {
+@include mediaQuery($min, $post-desktop) {
     body {
       font-size: size(body);
     }
+    .box img {
+      width: unset;
+    }
 }
+
