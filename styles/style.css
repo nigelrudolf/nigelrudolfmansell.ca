@@ -498,7 +498,7 @@ header {
   display: inline-block;
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: -100px;
   right: 0px;
 }
 
@@ -523,6 +523,43 @@ header {
 
 .hire-me i {
   padding-right: 30px;
+}
+
+.projects {
+  margin-top: 180px;
+}
+
+.projects-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 940px;
+  margin-top: 40px;
+}
+
+.projects-gallery li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.projects-gallery li img {
+  width: 390px;
+  height: 440px;
+}
+
+.about-social-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (max-width: 640px) {
