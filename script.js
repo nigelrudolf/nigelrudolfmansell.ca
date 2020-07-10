@@ -1,9 +1,5 @@
 const portfolioApp = {};
 
-portfolioApp.state = {
-    navIsVisible: false,
-}
-
 // Changes the navigation type to mobile or desktop
 // depending on screen width
 portfolioApp.toggleNavigationType = () => {

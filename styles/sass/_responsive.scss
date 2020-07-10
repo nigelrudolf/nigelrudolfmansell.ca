@@ -66,7 +66,27 @@ $max: max-width;
     body {
       font-size: size(body) * 0.70;
     }
-}
+    .logo {
+      font-size: size(logo) * 0.70;
+    }
+    .header-nav ul li a {
+      font-size: size(nav-links) * 0.70;
+    }
+    .hello {
+      font-size: size(hello) * 0.70;
+    }
+    .name {
+      font-size: size(name) * 0.70;
+    }
+    .sub-title {
+      font-size: size(sub-title) * 0.70;
+    }
+    .hire-me {
+      font-size: size(button) * 0.70;
+    }
+
+
+} // END OF MOBILE MEDIA QUERY
 
 @include mediaQuery($min, $palm) {
     .wrapper {
@@ -76,12 +96,49 @@ $max: max-width;
     body {
       font-size: size(body) * 0.75;
     }
-}
+    .logo {
+      font-size: size(logo) * 0.75;
+    }
+    .header-nav ul li a {
+      font-size: size(nav-links) * 0.75;
+    }
+    .hello {
+      font-size: size(hello) * 0.75;
+    }
+    .name {
+      font-size: size(name) * 0.75;
+    }
+    .sub-title {
+      font-size: size(sub-title) * 0.75;
+    }
+    .hire-me {
+      font-size: size(button) * 0.75;
+    }
+} // END OF PALM MEDIA QUERY
+
 
 @include mediaQuery($min, $tablet) {
   
   body {
     font-size: size(body) * 0.875;
+  }
+  .logo {
+    font-size: size(logo) * 0.875;
+  }
+  .header-nav ul li a {
+    font-size: size(nav-links) * 0.875;
+  }
+  .hello {
+    font-size: size(hello) * 0.875;
+  }
+  .name {
+    font-size: size(name) * 0.875;
+  }
+  .sub-title {
+    font-size: size(sub-title) * 0.875;
+  }
+  .hire-me {
+    font-size: size(button) * 0.875;
   }
     
   .header-nav {
@@ -135,15 +192,103 @@ $max: max-width;
     }
 } 
 
-
+.welcome {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
 }
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 490px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  margin-bottom: unset;
+}
+
+.greeting-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 240px;
+}
+
+.hello {
+  font-size: size(hello);
+  text-transform: uppercase;
+  width: 700px;
+}
+
+.name {
+  display: inline-block;
+  width: 700px;
+  font-size: size(name);
+}
+
+.sub-title {
+  font-size: size(sub-title);
+  font-weight: weight(light);
+  width: 100%;
+}
+
+.box {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: color(tertiary);
+  right: 0;
+  top: 40px;
+  &::before {
+      content: url(/assets/pgram.svg);
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      top: -140px;
+      right: 0px;
+  }
+  img {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      width: 550px;
+      display: block;
+  }
+}
+
+.hire-me {
+  align-self: unset;
+}
+
+
+} // END OF TABLET MEDIA QUERY
 
 @include mediaQuery($min, $post-desktop) {
     body {
       font-size: size(body);
     }
+    .logo {
+      font-size: size(logo);
+    }
+    .header-nav ul li a {
+      font-size: size(nav-links);
+    }
+    .hello {
+      font-size: size(hello);
+    }
+    .name {
+      font-size: size(name);
+    }
+    .sub-title {
+      font-size: size(sub-title);
+    }
+    .hire-me {
+      font-size: size(button);
+    }
+
     .box img {
       width: unset;
     }
-}
-
+} // END OF DESKTOP MEDIA QUERY
