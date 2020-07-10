@@ -34,15 +34,29 @@ portfolioApp.toggleMobileNavigation = () => {
 
 // Dynamically sets the .welcome element height
 portfolioApp.setWelcomeHeight = () => {
-    let boxHeight = $('.box').height();
-    let boxOffset = parseInt($('.box').css('top'), 10);
- 
-    let imageHeight = $('.box img').height();
-    let imageOffset = parseInt($('.box img').css('top'), 10);
+    const tabletBreakPoint = 768;
 
-    let welcomeHeight = (boxHeight + boxOffset + (imageHeight - boxHeight) + imageOffset) + "px";
+    if ( $( window ).width() < tabletBreakPoint ) {
 
-    $('.welcome').css('height', welcomeHeight);
+        let greetingHeight = $('.greeting').height();
+        let greetingMargin = parseInt($('.greeting').css('margin-bottom'), 10);
+        let boxHeight = $('.box').height();
+
+        let welcomeHeight = greetingHeight + greetingMargin + boxHeight;
+
+        $('.welcome').css('height', welcomeHeight);
+
+    } else if ( $( window ).width() > tabletBreakPoint ) {
+        let boxHeight = $('.box').height();
+        let boxOffset = parseInt($('.box').css('top'), 10);
+    
+        let imageHeight = $('.box img').height();
+        let imageOffset = parseInt($('.box img').css('top'), 10);
+
+        let welcomeHeight = (boxHeight + boxOffset + (imageHeight - boxHeight) + imageOffset) + "px";
+
+        $('.welcome').css('height', welcomeHeight);
+    }
 }
 
 portfolioApp.init = () => {

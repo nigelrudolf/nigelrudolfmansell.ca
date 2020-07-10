@@ -74,16 +74,14 @@ header {
   
 
 .welcome {
-    // display: flex;
     position: relative;
-    // align-items: flex-end;
+    margin-bottom: 40px;
 }
 
 .greeting {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // height: 490px;
     height: 350px;
     align-items: flex-start;
     position: relative;
@@ -101,14 +99,11 @@ header {
 .hello {
     font-size: size(hello);
     text-transform: uppercase;
-    // width: 700px;
     width: 100%;
 }
 
 .name {
     display: inline-block;
-    // width: 700px;
-    font-size: size(name);
 }
 
 .sub-title {
@@ -118,10 +113,7 @@ header {
 }
 
 .box {
-    // position: absolute;
-    // width: 500px;
     width: 100%;
-    // height: 500px;
     background: color(tertiary);
     right: 0;
     top: 40px;
@@ -130,15 +122,10 @@ header {
         display: inline-block;
         position: absolute;
         z-index: -1;
-        // top: -140px;
         top: 0;
         right: 0px;
     }
     img {
-        // position: absolute;
-        top: 40px;
-        right: 40px;
-        // width: 550px;
         width: 100%;
         display: block;
     }

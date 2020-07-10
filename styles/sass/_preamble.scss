@@ -7,11 +7,11 @@ html, body, p, h1, h2, h3, h4, h5, h6, nav, ul, li, a, section, div, main, foote
     @include reset;
 }
 
-body {
-    font-size: 1.6rem;
-}
-
 .wrapper {
     width: calc(100% - 40px);
     margin: 0 auto;
+}
+
+.section-heading {
+    text-transform: uppercase;
 }
