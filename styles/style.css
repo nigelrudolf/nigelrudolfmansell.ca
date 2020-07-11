@@ -494,7 +494,7 @@ header {
 }
 
 .box::before {
-  content: url(/assets/pgram.svg);
+  content: url(../assets/pgram.svg);
   display: inline-block;
   position: absolute;
   z-index: -1;
@@ -535,10 +535,9 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 940px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 40px;
 }
 
@@ -546,6 +545,7 @@ header {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin: 10px;
 }
 
 .projects-gallery li img {

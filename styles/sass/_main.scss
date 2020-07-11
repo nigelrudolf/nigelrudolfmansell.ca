@@ -7,11 +7,11 @@
 .projects-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 940px;
+    justify-content: center;
     margin-top: 40px;
     li {
         @include list-reset;
+        margin: 10px;
         img {
             width: 390px;
             height: 440px;

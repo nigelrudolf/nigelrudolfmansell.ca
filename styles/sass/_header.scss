@@ -118,7 +118,7 @@ header {
     right: 0;
     top: 40px;
     &::before {
-        content: url(/assets/pgram.svg);
+        content: url(../assets/pgram.svg);
         display: inline-block;
         position: absolute;
         z-index: -1;
