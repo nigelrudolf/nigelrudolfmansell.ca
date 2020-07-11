@@ -331,12 +331,21 @@ html, body, p, h1, h2, h3, h4, h5, h6, nav, ul, li, a, section, div, main, foote
   padding: 0;
 }
 
+p {
+  font-weight: 300;
+}
+
 .wrapper {
   width: calc(100% - 40px);
   margin: 0 auto;
 }
 
 .section-heading {
+  text-transform: uppercase;
+}
+
+.section-heading-alt {
+  color: #FE5D44;
   text-transform: uppercase;
 }
 
@@ -526,7 +535,7 @@ header {
 }
 
 .projects {
-  margin-top: 180px;
+  margin-top: 40px;
 }
 
 .projects-gallery {
@@ -538,19 +547,47 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .projects-gallery li {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .projects-gallery li img {
-  width: 390px;
-  height: 440px;
+  width: 100%;
+}
+
+.about {
+  background-image: url(../assets/about-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about-info h3, .about-info p, .about-info a {
+  color: #FFF;
 }
 
 .about-social-links {
@@ -562,9 +599,29 @@ header {
   display: flex;
 }
 
+.about-social-links li {
+  border: 1px solid #FFF;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.about-box {
+  -ms-flex-preferred-size: 555px;
+      flex-basis: 555px;
+}
+
+.about-box img {
+  width: 100%;
+  display: block;
+}
+
 @media screen and (max-width: 640px) {
   body {
     font-size: 1.12rem;
+  }
+  p {
+    font-size: 2.45rem;
   }
   .logo {
     font-size: 2.31rem;
@@ -575,8 +632,14 @@ header {
   .hello {
     font-size: 2.66rem;
   }
-  .name, .section-heading {
+  .name {
     font-size: 6.79rem;
+  }
+  .section-heading {
+    font-size: 5.82rem;
+  }
+  .section-heading-alt {
+    font-size: 2.66rem;
   }
   .sub-title {
     font-size: 3.01rem;
@@ -593,6 +656,9 @@ header {
   body {
     font-size: 1.2rem;
   }
+  p {
+    font-size: 2.625rem;
+  }
   .logo {
     font-size: 2.475rem;
   }
@@ -605,17 +671,33 @@ header {
   .name, .section-heading {
     font-size: 7.275rem;
   }
+  .section-heading-alt {
+    font-size: 2.85rem;
+  }
   .sub-title {
     font-size: 3.225rem;
   }
   .hire-me {
     font-size: 2.4rem;
   }
+  .projects {
+    margin-top: 180px;
+  }
+  .projects-gallery li {
+    margin: 10px;
+  }
+  .projects-gallery li img {
+    width: 390px;
+    height: 440px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.4rem;
+  }
+  p {
+    font-size: 3.0625rem;
   }
   .logo {
     font-size: 2.8875rem;
@@ -628,6 +710,9 @@ header {
   }
   .name, .section-heading {
     font-size: 8.4875rem;
+  }
+  .section-heading-alt {
+    font-size: 3.325rem;
   }
   .sub-title {
     font-size: 3.7625rem;
@@ -704,6 +789,9 @@ header {
   body {
     font-size: 1.6rem;
   }
+  p {
+    font-size: 3.5rem;
+  }
   .logo {
     font-size: 3.3rem;
   }
@@ -715,6 +803,9 @@ header {
   }
   .name, .section-heading {
     font-size: 9.7rem;
+  }
+  .section-heading-alt {
+    font-size: 3.8rem;
   }
   .sub-title {
     font-size: 4.3rem;

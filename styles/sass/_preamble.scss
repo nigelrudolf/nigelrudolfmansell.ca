@@ -7,11 +7,20 @@ html, body, p, h1, h2, h3, h4, h5, h6, nav, ul, li, a, section, div, main, foote
     @include reset;
 }
 
+p {
+    font-weight: weight(light);
+}
+
 .wrapper {
     width: calc(100% - 40px);
     margin: 0 auto;
 }
 
 .section-heading {
+    text-transform: uppercase;
+}
+
+.section-heading-alt {
+    color: color(secondary);
     text-transform: uppercase;
 }

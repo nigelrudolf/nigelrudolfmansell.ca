@@ -2,19 +2,18 @@
 // $Projects Section
 // ==================================================
 .projects {
-    margin-top: 180px;
+    margin-top: 40px;
 }
 .projects-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 20px;
     li {
         @include list-reset;
-        margin: 10px;
+        margin: 10px 0;
         img {
-            width: 390px;
-            height: 440px;
+            width: 100%;
         }
     }
 }
@@ -22,7 +21,46 @@
 // ==================================================
 // $About Me Section
 // ==================================================
+
+
+.about {
+    background-image: url(../assets/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    // max-height: 1595px;
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.about-info {
+    flex: 1;
+    h3, p, a {
+        color: color(quaternary);
+    }
+}
+
 .about-social-links {
     @include list-reset;
     display: flex;
+    li {
+        border: 1px solid color(quaternary);
+        margin: 10px;
+        padding: 10px;
+        border-radius: 30px;
+
+    }
+}
+
+.about-box {
+    flex-basis: 555px;
+    img {
+        width: 100%;
+        display: block;
+        // max-width: 95%;
+    }
 }
