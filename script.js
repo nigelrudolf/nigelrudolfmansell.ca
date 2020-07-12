@@ -68,7 +68,7 @@ portfolioApp.init = () => {
 
         $( window ).on('resize', function(){
             portfolioApp.setWelcomeHeight();
-        });    
+        });
 }
 
 $(document).ready(function(){

@@ -309,9 +309,29 @@ $max: max-width;
     .about {
       height: 100vh;
       display: flex;
+      .wrapper {
+        flex-wrap: unset;
+      }
+    }
+
+    .about-info {
+      min-height: 700px;
+    }
+    .heading-and-name {
+      width: 700px;
+    }
+
+    .text-social {
+      p {
+        margin-bottom: 40px;
+      }
     }
     .about-box {
       flex-basis: 555px;
       box-shadow: 45px -45px color(tertiary);
+      position: relative;
+      z-index: 0;
+      top: 125px;
+      right: 100px;
     }
 } // END OF MIN POST-DESKTOP MEDIA QUERY

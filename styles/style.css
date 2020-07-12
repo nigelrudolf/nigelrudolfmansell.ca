@@ -605,6 +605,10 @@ header {
   line-height: 1.6;
 }
 
+.text-social p {
+  margin-bottom: 20px;
+}
+
 .about-social-links {
   margin: 0;
   padding: 0;
@@ -619,10 +623,31 @@ header {
   margin: 0 10px;
   padding: 10px;
   border-radius: 30px;
+  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
+  transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
+}
+
+.about-social-links li a {
+  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
+  transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
 }
 
 .about-social-links li:nth-child(1) {
   margin-left: 0;
+}
+
+.about-social-links li:hover {
+  border: 1px solid #FE5D44;
+}
+
+.about-social-links li:hover a {
+  color: #FE5D44;
+}
+
+.fa-twitter::before {
+  position: relative;
+  top: 1.5px;
+  left: 1.5px;
 }
 
 .about-box {
@@ -867,10 +892,27 @@ header {
     display: -ms-flexbox;
     display: flex;
   }
+  .about .wrapper {
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+  }
+  .about-info {
+    min-height: 700px;
+  }
+  .heading-and-name {
+    width: 700px;
+  }
+  .text-social p {
+    margin-bottom: 40px;
+  }
   .about-box {
     -ms-flex-preferred-size: 555px;
         flex-basis: 555px;
     -webkit-box-shadow: 45px -45px #000;
             box-shadow: 45px -45px #000;
+    position: relative;
+    z-index: 0;
+    top: 125px;
+    right: 100px;
   }
 }

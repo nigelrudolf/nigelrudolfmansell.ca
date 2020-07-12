@@ -28,10 +28,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    // height: 100vh;
-    // max-height: 1595px;
-    // display: flex;
-    // align-items: center;
     padding: 50px 0;
     .wrapper {
         display: flex;
@@ -45,42 +41,65 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    // width: 100%;
-    // margin-bottom: 25px;
     min-height: 400px;
     h3, p, a {
         color: color(quaternary);
     }
     p {
-        // width: 404px;
         line-height: 1.6;
+    }
+}
+
+.text-social {
+    p {
+        margin-bottom: 20px;
     }
 }
 
 .about-social-links {
     @include list-reset;
     display: flex;
-    // justify-content: space-between;
+    
     li {
         border: 1px solid color(quaternary);
         margin: 0 10px;
         padding: 10px;
         border-radius: 30px;
+
+        transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
+        a {
+            transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
+        }
         &:nth-child(1) {
             margin-left: 0;
+        }
+        &:hover {
+            border: 1px solid color(secondary);
+            a {
+                color: color(secondary);
+            }
         }
     }
 }
 
+
+
+.fa-twitter::before {
+    position: relative;
+    top: 1.5px;
+    left: 1.5px;
+}
+
 .about-box {
     flex-basis: 400px;
-    // box-shadow: 45px -45px color(tertiary);
     margin-top: 25px;
     img {
         width: 100%;
         display: block;
-        // max-width: 95%;
         position: relative;
     }    
 }
 
+// ==================================================
+// $Skills Section
+// ==================================================
