@@ -142,7 +142,14 @@ $max: max-width;
           }
       }
   }
+  .about-box {
+    flex-basis: 450px;
+    // box-shadow: 45px -45px color(tertiary);
 
+}
+.about-info {
+  margin-bottom: 80px;
+}
 
 } // END OF MIN PALM MEDIA QUERY
 
@@ -239,6 +246,28 @@ $max: max-width;
   align-self: unset;
 }
 
+// ==================================================
+// $About Me Section
+// ==================================================
+
+.about {
+  .wrapper {
+      align-items: center;
+  }
+}
+.about-info {
+  margin-bottom: unset;
+  min-height: 600px;
+  p {
+    width: 404px;
+}
+}
+
+.about-box {
+  flex-basis: 370px;
+  margin-top: unset;
+}
+
 } // END OF MIN TABLET MEDIA QUERY
 
 @include mediaQuery($min, $post-desktop) {
@@ -272,5 +301,17 @@ $max: max-width;
 
     .box img {
       width: unset;
+    }
+
+    // ==================================================
+    // $About Me Section
+    // ==================================================
+    .about {
+      height: 100vh;
+      display: flex;
+    }
+    .about-box {
+      flex-basis: 555px;
+      box-shadow: 45px -45px color(tertiary);
     }
 } // END OF MIN POST-DESKTOP MEDIA QUERY

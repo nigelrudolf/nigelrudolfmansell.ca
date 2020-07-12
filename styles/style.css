@@ -566,7 +566,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  padding: 50px 0;
 }
 
 .about .wrapper {
@@ -581,13 +581,28 @@ header {
 }
 
 .about-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  min-height: 400px;
 }
 
 .about-info h3, .about-info p, .about-info a {
   color: #FFF;
+}
+
+.about-info p {
+  line-height: 1.6;
 }
 
 .about-social-links {
@@ -601,19 +616,25 @@ header {
 
 .about-social-links li {
   border: 1px solid #FFF;
-  margin: 10px;
+  margin: 0 10px;
   padding: 10px;
   border-radius: 30px;
 }
 
+.about-social-links li:nth-child(1) {
+  margin-left: 0;
+}
+
 .about-box {
-  -ms-flex-preferred-size: 555px;
-      flex-basis: 555px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  margin-top: 25px;
 }
 
 .about-box img {
   width: 100%;
   display: block;
+  position: relative;
 }
 
 @media screen and (max-width: 640px) {
@@ -689,6 +710,13 @@ header {
   .projects-gallery li img {
     width: 390px;
     height: 440px;
+  }
+  .about-box {
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
+  }
+  .about-info {
+    margin-bottom: 80px;
   }
 }
 
@@ -783,6 +811,23 @@ header {
         -ms-grid-row-align: unset;
         align-self: unset;
   }
+  .about .wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-info {
+    margin-bottom: unset;
+    min-height: 600px;
+  }
+  .about-info p {
+    width: 404px;
+  }
+  .about-box {
+    -ms-flex-preferred-size: 370px;
+        flex-basis: 370px;
+    margin-top: unset;
+  }
 }
 
 @media screen and (min-width: 1440.1px) {
@@ -815,5 +860,17 @@ header {
   }
   .box img {
     width: unset;
+  }
+  .about {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about-box {
+    -ms-flex-preferred-size: 555px;
+        flex-basis: 555px;
+    -webkit-box-shadow: 45px -45px #000;
+            box-shadow: 45px -45px #000;
   }
 }
