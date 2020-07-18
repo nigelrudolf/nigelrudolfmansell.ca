@@ -22,11 +22,18 @@ portfolioApp.toggleMobileNavigation = () => {
     $('.header-nav').toggleClass(function(){
         if ( $( this ).hasClass('slide-in-bottom') ) {
             return (
-                $( this ).addClass('slide-out-bottom').removeClass('slide-in-bottom')
+                $( this ).addClass('slide-out-bottom').removeClass('slide-in-bottom'),
+                setTimeout(function(){
+                    $( '.header-nav' ).css('height', "")
+                    .removeClass('slide-out-bottom')
+                    .addClass('sr-only')
+                    .removeAttr('style');
+                }, 501)
             )
         } else {
             return (
-                $( this ).addClass('slide-in-bottom').removeClass('sr-only slide-out-bottom')
+                $( this ).addClass('slide-in-bottom').removeClass('sr-only slide-out-bottom'),
+                $( this ).css('height', "100vh")
             )
         }
     });
