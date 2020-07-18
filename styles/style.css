@@ -439,6 +439,11 @@ header {
           transform: scaleX(1);
 }
 
+.fixed-menu {
+  position: fixed;
+  overflow: hidden;
+}
+
 .welcome {
   position: relative;
   margin-bottom: 40px;

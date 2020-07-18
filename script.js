@@ -28,12 +28,15 @@ portfolioApp.toggleMobileNavigation = () => {
                     .removeClass('slide-out-bottom')
                     .addClass('sr-only')
                     .removeAttr('style');
+                    $( 'body' ).removeClass('fixed-menu')
+                    .removeAttr('class');
                 }, 501)
             )
         } else {
             return (
                 $( this ).addClass('slide-in-bottom').removeClass('sr-only slide-out-bottom'),
-                $( this ).css('height', "100vh")
+                $( this ).css('height', "100vh"),
+                $( 'body' ).addClass('fixed-menu')
             )
         }
     });

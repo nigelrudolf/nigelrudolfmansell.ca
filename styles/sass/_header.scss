@@ -70,6 +70,10 @@ header {
     }
 } 
   
+.fixed-menu {
+    position: fixed;
+    overflow: hidden;
+}
 
 .welcome {
     position: relative;
