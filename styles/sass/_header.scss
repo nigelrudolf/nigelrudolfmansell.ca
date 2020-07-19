@@ -3,7 +3,7 @@ header {
     flex-direction: column;
 }
 
-.navigation {
+.navigation-section {
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -75,7 +75,7 @@ header {
     overflow: hidden;
 }
 
-.welcome {
+.welcome-section {
     position: relative;
     margin-bottom: 40px;
 }

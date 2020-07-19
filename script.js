@@ -54,7 +54,7 @@ portfolioApp.setWelcomeHeight = () => {
 
         let welcomeHeight = greetingHeight + greetingMargin + boxHeight;
 
-        $('.welcome').css('height', welcomeHeight);
+        $('.welcome-section').css('height', welcomeHeight);
 
     } else if ( $( window ).width() > tabletBreakPoint ) {
         let boxHeight = $('.box').height();
@@ -65,7 +65,7 @@ portfolioApp.setWelcomeHeight = () => {
 
         let welcomeHeight = (boxHeight + boxOffset + (imageHeight - boxHeight) + imageOffset) + "px";
 
-        $('.welcome').css('height', welcomeHeight);
+        $('.welcome-section').css('height', welcomeHeight);
     }
 }
 

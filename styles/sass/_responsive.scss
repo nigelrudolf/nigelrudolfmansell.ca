@@ -129,7 +129,7 @@ $max: max-width;
       font-size: size(button) * 0.75;
     }
 
-    .projects {
+    .projects-section {
       margin-top: 180px;
     }
 
@@ -208,7 +208,7 @@ $max: max-width;
     }
 } 
 
-.welcome {
+.welcome-section {
   display: flex;
   align-items: flex-end;
 }
@@ -250,7 +250,7 @@ $max: max-width;
 // $About Me Section
 // ==================================================
 
-.about {
+.about-section {
   .wrapper {
       align-items: center;
   }
@@ -266,6 +266,13 @@ $max: max-width;
 .about-box {
   flex-basis: 370px;
   margin-top: unset;
+}
+
+.skills-gallery {
+  width: 700px;
+  li {
+    width: 200px;
+  }
 }
 
 } // END OF MIN TABLET MEDIA QUERY
@@ -306,7 +313,7 @@ $max: max-width;
     // ==================================================
     // $About Me Section
     // ==================================================
-    .about {
+    .about-section {
       height: 100vh;
       display: flex;
       .wrapper {
