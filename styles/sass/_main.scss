@@ -205,3 +205,44 @@
     }
 }
 
+// ==================================================
+// $Contact Section
+// ==================================================
+
+.contact-section {
+    color: white;
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(black,0.5)), url(../assets/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-section-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 40px);
+    max-width: 600px;
+    margin: 0 auto;
+    margin: 25px auto 0 auto;
+    label {
+        font-size: 2rem;
+    }
+    input, textarea {
+        background: white;
+        font-size: 2.2rem;
+        flex: 100%;
+        padding: 10px;
+        margin: 10px 0 40px 0;
+        border: none;
+        &:nth-child(7) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    textarea {
+        overflow: auto;
+        resize: none;
+    }
+}

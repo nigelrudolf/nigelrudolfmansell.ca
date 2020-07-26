@@ -1,3 +1,4 @@
+/*eslint-disable*/ 
 const portfolioApp = {};
 
 // Changes the navigation type to mobile or desktop
@@ -79,6 +80,7 @@ portfolioApp.init = () => {
         $( window ).on('resize', function(){
             portfolioApp.setWelcomeHeight();
         });
+
 }
 
 $(document).ready(function(){
