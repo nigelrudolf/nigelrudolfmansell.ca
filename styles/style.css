@@ -357,6 +357,10 @@ p {
   color: #FE5D44;
 }
 
+.fixed-menu {
+  overflow: hidden;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -416,7 +420,6 @@ header {
 .header-nav ul li a {
   text-decoration: none;
   color: #000;
-  font-size: 2rem;
   font-weight: 900;
   text-transform: uppercase;
   position: relative;
@@ -441,11 +444,6 @@ header {
   visibility: visible;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-}
-
-.fixed-menu {
-  position: fixed;
-  overflow: hidden;
 }
 
 .welcome-section {
@@ -926,7 +924,7 @@ footer .copyright-container p {
     font-size: 2.31rem;
   }
   .header-nav ul li a {
-    font-size: 1.4rem;
+    font-size: 4rem;
   }
   .hello {
     font-size: 2.66rem;
@@ -962,7 +960,7 @@ footer .copyright-container p {
     font-size: 2.475rem;
   }
   .header-nav ul li a {
-    font-size: 1.5rem;
+    font-size: 4rem;
   }
   .hello {
     font-size: 2.85rem;

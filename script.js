@@ -1,48 +1,6 @@
 /*eslint-disable*/ 
 const portfolioApp = {};
 
-// Changes the navigation type to mobile or desktop
-// depending on screen width
-portfolioApp.toggleNavigationType = () => {
-    const tabletBreakPoint = 768;
-    $( window ).on('resize', function(){
-        if( $( window ).width() < tabletBreakPoint ) {
-           $('.header-nav').addClass('sr-only'); 
-           $('.mobile-menu-button').removeClass('sr-only');
-        } else {
-            $('.header-nav').removeClass('sr-only');
-            $('.mobile-menu-button').addClass('sr-only');
-
-            // clearing toggleMobileNavigation effects
-            $('.header-nav').removeClass('slide-in-bottom slide-out-bottom');
-        }
-    }).resize();
-}
-
-portfolioApp.toggleMobileNavigation = () => {    
-    $('.header-nav').toggleClass(function(){
-        if ( $( this ).hasClass('slide-in-bottom') ) {
-            return (
-                $( this ).addClass('slide-out-bottom').removeClass('slide-in-bottom'),
-                setTimeout(function(){
-                    $( '.header-nav' ).css('height', "")
-                    .removeClass('slide-out-bottom')
-                    .addClass('sr-only')
-                    .removeAttr('style');
-                    $( 'body' ).removeClass('fixed-menu')
-                    .removeAttr('class');
-                }, 501)
-            )
-        } else {
-            return (
-                $( this ).addClass('slide-in-bottom').removeClass('sr-only slide-out-bottom'),
-                $( this ).css('height', "100vh"),
-                $( 'body' ).addClass('fixed-menu')
-            )
-        }
-    });
-}
-
 // Dynamically sets the .welcome element height
 portfolioApp.setWelcomeHeight = () => {
     const tabletBreakPoint = 768;
@@ -70,6 +28,52 @@ portfolioApp.setWelcomeHeight = () => {
     }
 }
 
+// Changes the navigation type to mobile or desktop
+// depending on screen width
+portfolioApp.toggleNavigationType = () => {
+    const tabletBreakPoint = 768;
+    $( window ).on('resize', function(){
+        if( $( window ).width() < tabletBreakPoint ) {
+           $('.header-nav').addClass('sr-only'); 
+           $('.mobile-menu-button').removeClass('sr-only');
+        } else {
+            $('.header-nav').removeClass('sr-only');
+            $('.mobile-menu-button').addClass('sr-only');
+
+            // clearing toggleMobileNavigation effects
+            $('.header-nav').removeClass('slide-in-bottom slide-out-bottom');
+        }
+    }).resize();
+}
+
+portfolioApp.toggleMobileNavigation = (timer = 501) => {    
+    $('.header-nav').toggleClass(function(){
+        if ( $( this ).hasClass('slide-in-bottom') ) {
+            return (
+                $( this ).addClass('slide-out-bottom').removeClass('slide-in-bottom'),
+                setTimeout(function(){
+                    $( '.header-nav' ).css('height', "")
+                    .removeClass('slide-out-bottom')
+                    .addClass('sr-only')
+                    .removeAttr('style');
+                    $( 'body' ).removeClass('fixed-menu')
+                    .removeAttr('class');
+                }, timer)
+            )
+        } else {
+            return (
+                $( this ).addClass('slide-in-bottom').removeClass('sr-only slide-out-bottom'),
+                $( this ).css('height', "100vh"),
+                $( 'body' ).addClass('fixed-menu')
+            )
+        }
+    });
+}
+
+portfolioApp.mobileMenuSelect = () => {
+    
+}
+
 portfolioApp.init = () => {
         portfolioApp.toggleNavigationType();
 
@@ -77,10 +81,20 @@ portfolioApp.init = () => {
             portfolioApp.toggleMobileNavigation();
         });
 
+        
+        document.querySelectorAll('.header-nav-links li').forEach((link)=>{
+            link.addEventListener('click', function(){
+                const tabletBreakPoint = 768;
+                let width = window.innerWidth;
+                console.log(link);
+                // toggleMobileNavigation will lock screen when larger than tabletBreakPoint
+                width < tabletBreakPoint ? portfolioApp.toggleMobileNavigation(0) : null; 
+            });
+        });
+
         $( window ).on('resize', function(){
             portfolioApp.setWelcomeHeight();
         });
-
 }
 
 $(document).ready(function(){

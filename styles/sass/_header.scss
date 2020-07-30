@@ -41,7 +41,6 @@ header {
             a {
                 text-decoration: none;
                 color: color(tertiary);
-                font-size: size(nav-links);
                 font-weight: weight(black);
                 text-transform: uppercase;
                 position: relative;
@@ -65,11 +64,6 @@ header {
         }
     }
 } 
-  
-.fixed-menu {
-    position: fixed;
-    overflow: hidden;
-}
 
 .welcome-section {
     position: relative;
