@@ -534,10 +534,16 @@ header {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transition: all 1.5s cubic-bezier(0, 0.81, 0.24, 0.99);
+  transition: all 1.5s cubic-bezier(0, 0.81, 0.24, 0.99);
 }
 
 .hire-me i {
   padding-right: 30px;
+}
+
+.hire-me:hover {
+  background: #FE5D44;
 }
 
 .projects-section {
@@ -630,24 +636,27 @@ header {
   margin: 0 10px;
   padding: 10px;
   border-radius: 30px;
-  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
-  transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
-}
-
-.about-social-links li a {
-  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
-  transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
 }
 
 .about-social-links li:nth-child(1) {
   margin-left: 0;
 }
 
-.about-social-links li:hover {
+.social-link {
+  -webkit-transition: all 1.5s cubic-bezier(0, 0.81, 0.24, 0.99);
+  transition: all 1.5s cubic-bezier(0, 0.81, 0.24, 0.99);
+}
+
+.social-link a {
+  -webkit-transition: all 1.5s cubic-bezier(0, 0.81, 0.24, 0.99);
+  transition: all 1.5s cubic-bezier(0, 0.81, 0.24, 0.99);
+}
+
+.social-link:hover {
   border: 1px solid #FE5D44;
 }
 
-.about-social-links li:hover a {
+.social-link:hover a {
   color: #FE5D44;
 }
 
@@ -825,7 +834,6 @@ header {
       flex-wrap: wrap;
   width: calc(100% - 40px);
   max-width: 600px;
-  margin: 0 auto;
   margin: 25px auto 0 auto;
 }
 
@@ -852,6 +860,7 @@ header {
 .contact-section-form textarea {
   overflow: auto;
   resize: none;
+  height: 220px;
 }
 
 footer {

@@ -133,8 +133,12 @@ header {
     display: inline-block;
     padding: 20px 60px;
     align-self: center;
+    transition: all 1.5s cubic-bezier(0,.81,.24,.99);
     i {
         padding-right: 30px;
+    }
+    &:hover {
+        background: color(secondary);
     }
 }
 

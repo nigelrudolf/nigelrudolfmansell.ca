@@ -59,28 +59,30 @@
 .about-social-links {
     @include list-reset;
     display: flex;
-    
     li {
         border: 1px solid color(quaternary);
         margin: 0 10px;
         padding: 10px;
         border-radius: 30px;
-
-        transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
-        a {
-            transition: all 0.2s cubic-bezier(0.12, 0.67, 0.88, 0.29);
-        }
         &:nth-child(1) {
             margin-left: 0;
         }
-        &:hover {
-            border: 1px solid color(secondary);
-            a {
-                color: color(secondary);
-            }
+    }
+}
+
+.social-link {
+    transition: all 1.5s cubic-bezier(0,.81,.24,.99);
+    a {
+        transition: all 1.5s cubic-bezier(0,.81,.24,.99);
+    }
+    &:hover {
+        border: 1px solid color(secondary);
+        a {
+            color: color(secondary);
         }
     }
 }
+
 
 
 
@@ -223,7 +225,6 @@
     flex-wrap: wrap;
     width: calc(100% - 40px);
     max-width: 600px;
-    margin: 0 auto;
     margin: 25px auto 0 auto;
     label {
         font-size: 2rem;
@@ -244,5 +245,7 @@
     textarea {
         overflow: auto;
         resize: none;
+        height: 220px;
+        
     }
 }
