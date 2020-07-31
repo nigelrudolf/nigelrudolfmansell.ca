@@ -71,7 +71,51 @@ portfolioApp.toggleMobileNavigation = (timer = 501) => {
 }
 
 portfolioApp.mobileMenuSelect = () => {
-    
+    const tabletBreakPoint = 768;
+    let width = window.innerWidth;
+    // toggleMobileNavigation will lock screen when larger than tabletBreakPoint
+    width < tabletBreakPoint ? portfolioApp.toggleMobileNavigation(0) : null;
+}
+
+// encodeEmail(), decodeEmail(), updateAnchor() by:
+// https://devsday.ru/blog/details/16449
+portfolioApp.decodeEmail = (encodedString) => {
+    // Holds the final output
+    let email = ""; 
+
+    // Extract the first 2 letters
+    let keyInHex = encodedString.substr(0, 2);
+
+    // Convert the hex-encoded key into decimal
+    let key = parseInt(keyInHex, 16);
+
+    // Loop through the remaining encoded characters in steps of 2
+    for (let n = 2; n < encodedString.length; n += 2) {
+
+        // Get the next pair of characters
+        let charInHex = encodedString.substr(n, 2)
+
+        // Convert hex to decimal
+        let char = parseInt(charInHex, 16);
+
+        // XOR the character with the key to get the original character
+        let output = char ^ key;
+
+        // Append the decoded character to the output
+        email += String.fromCharCode(output);
+    }
+    return email;
+}
+
+portfolioApp.updateAnchor = (el) => {
+    // fetch the hex-encoded string
+    let encoded = el.target.dataset.key;
+
+    // decode the email, using the decodeEmail() function from before
+    let decoded = portfolioApp.decodeEmail(encoded);
+
+    // Set the link to be a "mailto:" link
+    el.target.href = 'mailto:' + decoded;
 }
 
 portfolioApp.init = () => {
@@ -81,19 +125,16 @@ portfolioApp.init = () => {
             portfolioApp.toggleMobileNavigation();
         });
 
-        
         document.querySelectorAll('.header-nav-links li').forEach((link)=>{
-            link.addEventListener('click', function(){
-                const tabletBreakPoint = 768;
-                let width = window.innerWidth;
-                console.log(link);
-                // toggleMobileNavigation will lock screen when larger than tabletBreakPoint
-                width < tabletBreakPoint ? portfolioApp.toggleMobileNavigation(0) : null; 
-            });
+            link.addEventListener('click', portfolioApp.mobileMenuSelect);
         });
 
         $( window ).on('resize', function(){
             portfolioApp.setWelcomeHeight();
+        });
+
+        document.querySelector('.hire-me').addEventListener('click', function(e){
+            portfolioApp.updateAnchor(e);
         });
 }
 
