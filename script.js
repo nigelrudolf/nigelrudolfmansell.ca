@@ -118,6 +118,13 @@ portfolioApp.updateAnchor = (el) => {
     el.target.href = 'mailto:' + decoded;
 }
 
+portfolioApp.updateCopyright = () => {
+    let today = new Date();
+    let year = today.getFullYear();
+
+    document.querySelector('.copyright').innerHTML = year + ' Nigel Mansell';
+}
+
 portfolioApp.init = () => {
         portfolioApp.toggleNavigationType();
 
@@ -136,6 +143,8 @@ portfolioApp.init = () => {
         document.querySelector('.hire-me').addEventListener('click', function(e){
             portfolioApp.updateAnchor(e);
         });
+
+        portfolioApp.updateCopyright();
 }
 
 $(document).ready(function(){
