@@ -93,7 +93,7 @@ portfolioApp.decodeEmail = (encodedString) => {
     for (let n = 2; n < encodedString.length; n += 2) {
 
         // Get the next pair of characters
-        let charInHex = encodedString.substr(n, 2)
+        let charInHex = encodedString.substr(n, 2);
 
         // Convert hex to decimal
         let char = parseInt(charInHex, 16);
@@ -116,6 +116,7 @@ portfolioApp.updateAnchor = (el) => {
 
     // Set the link to be a "mailto:" link
     el.target.href = 'mailto:' + decoded;
+
 }
 
 portfolioApp.updateCopyright = () => {

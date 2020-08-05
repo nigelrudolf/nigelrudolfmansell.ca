@@ -97,59 +97,53 @@ $max: max-width;
 } // END OF MAX PALM MEDIA QUERY
 
 @include mediaQuery($min, $palm) {
-    .wrapper {
-      max-width: 1230px;
-    }
+  .wrapper {
+    max-width: 1230px;
+  }
 
-    body {
-      font-size: size(body) * 0.75;
-    }
-    p {
-      font-size: size(para) * 0.75;
-    }
-    .logo {
-      font-size: size(logo) * 0.75;
-    }
-    .header-nav ul li a {
-      font-size: size(font-40);
-    }
-    .hello {
-      font-size: size(hello) * 0.75;
-    }
-    .name, .section-heading {
-      font-size: size(name) * 0.75;
-    }
-    .section-heading-alt {
-      font-size: size(hello) * 0.75;
-    }
-    .sub-title {
-      font-size: size(sub-title) * 0.75;
-    }
-    .hire-me {
-      font-size: size(button) * 0.75;
-    }
+  body {
+    font-size: size(body) * 0.75;
+  }
+  p {
+    font-size: size(para) * 0.75;
+  }
+  .logo {
+    font-size: size(logo) * 0.75;
+  }
+  .header-nav ul li a {
+    font-size: size(font-40);
+  }
+  .hello {
+    font-size: size(hello) * 0.75;
+  }
+  .name, .section-heading {
+    font-size: size(name) * 0.75;
+  }
+  .section-heading-alt {
+    font-size: size(hello) * 0.75;
+  }
+  .sub-title {
+    font-size: size(sub-title) * 0.75;
+  }
+  .hire-me {
+    font-size: size(button) * 0.75;
+  }
 
-    .projects-section {
-      margin-top: 180px;
-    }
+  .projects-section {
+    margin-top: 180px;
+  }
 
-    .projects-gallery {
-      li {
-          margin: 10px;
-          img {
-              width: 390px;
-              height: 440px;
-          }
-      }
+  .projects-gallery {
+    li {
+        margin: 10px;
+    }
   }
   .about-box {
     flex-basis: 450px;
-    // box-shadow: 45px -45px color(tertiary);
-
-}
-.about-info {
-  margin-bottom: 80px;
-}
+  }
+  .about-info {
+    margin-bottom: 80px;
+  }
 
 } // END OF MIN PALM MEDIA QUERY
 
